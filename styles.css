@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Scrollbar*/
+*::-webkit-scrollbar {
+	width: 0;
+}
+
+*::-webkit-scrollbar-track {
+	overflow: scroll;
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #808080;
+	border-radius: 50px;
+	border: 0px solid orange;
+}
+
+/*Navigation Bar*/
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ECF0F1;
+    text-decoration: none;
+}
+
+header {
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 4%;
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+    z-index: 1;
+}
+
+header::after {
+    
+}
+
+#logo {
+    cursor: pointer;
+    margin-right: auto;
+    max-width: 13%;
+    max-height: 13%;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: rgba(236, 240, 241, 0.5);
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(207, 117, 0, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: rgba(207, 117, 0, 0.8);
+}
+
+/* Splash Screen */
+
+.intro {
+    font-family: "Sacramento", cursive;
+    font-size: 48px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/*Content*/
+
+body {
+    background: url(images/background_bw.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.container {
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.one {
+    padding: 50vh 0;
+    margin-left: 50%;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    text-align: left;
+    background-size: 100%;
+    animation: animate 3s ease-in-out infinite;
+}
+
+.one h2 {
+    color: black;
+}
+
+.one p {
+    margin-top: 0.5vh;
+}
+
+.univ {
+    color: white;
+    background-color: #242424;
+}
+
+@keyframes animate {
+    0% {transform: translate(0, 0px);}
+    50% {transform: translate(0, 10px);}
+    100% {transform: translate(0, -0px);}
+}
